@@ -27,6 +27,7 @@ export function Home() {
       name: newSkill,
     };
     setMySkills(oldState => [...oldState, data]);
+    setNewSkill('');
   }
 
   function handleRemoveSkill(id: string) {
@@ -56,6 +57,7 @@ export function Home() {
         placeholder="New Skill"
         placeholderTextColor="#555"
         onChangeText={setNewSkill}
+        value={newSkill}
       />
 
       <Button title="Add" onPress={handleAddNewSkill} />
